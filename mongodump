@@ -266,7 +266,7 @@ Printout "Check if mongodump is installed"
 if ! mongodump --version &> /dev/null
 then
     
-    apt-get update && apt-get install -y mongo-tools
+    apt-get install -y mongo-tools
     
     if ! mongodump --version &> /dev/null
     then
@@ -275,7 +275,6 @@ then
         echo "mongodump Not Found, exiting"
         exit
     fi
-    exit
 fi
 
 Printout "Starting Backup..."
